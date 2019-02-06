@@ -25,6 +25,31 @@ final accuracy on test data (alpha = 0.001):
 final accuracy on test data (alpha = 0.0001):
 0.8
 
+------------> Compare with normal equation
+--time
+computation time of normal equation:
+0.26186108589172363
+computation time of batch GD:
+16.876288890838623
+--loss and accuracy
+final training loss of normal equation:
+0.009352027826568264
+final accuracy of normal equation on training data:
+0.9937142857142857
+final accuracy of normal equation on validation data:
+0.96
+final accuracy of normal equation on test data:
+0.9448275862068966
+
+final training loss of gd:
+0.013658559538320486
+final accuracy of gd on training data:
+0.9788571428571429
+final accuracy of gd on validation data:
+0.98
+final accuracy of gd on test data:
+0.9724137931034482
+
 
 *****************************
 init: W=gaussian, b=gaussian

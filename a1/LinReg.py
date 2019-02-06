@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from starter import loadData, grad_descent, accuracy_plot, valid_or_test_loss
+import time
+from starter import loadData, grad_descent, accuracy_plot, valid_or_test_loss, MSE
 trainData, validData, testData, trainTarget, validTarget, testTarget = loadData()
 trainData = trainData.reshape(trainData.shape[0], -1)
 validData = validData.reshape(validData.shape[0], -1)
@@ -35,7 +36,7 @@ def validate_test_all_alpha_plot(train_W1, train_bias1, train_W2, train_bias2, t
     print(accuracy_plot(train_W3, train_bias3, data, target, alpha3, reg))
 
 
-def normal_equation(x, y, reg):
+def W_star_calculator(x, y, reg):
    X=x
    N=y.shape[0]
    d=x.shape[1]
@@ -43,11 +44,56 @@ def normal_equation(x, y, reg):
    I=np.identity(d+1)
    I[0,0]=0
    X=np.append(x_zero,X,axis=1)
-   print(X.shape)
+   # print(X.shape)
    W_star=np.dot(np.dot(np.linalg.inv(np.dot(X.T,X)+reg*I),X.T),y)
    bias=W_star[0]
    W_star=np.delete(W_star,(0),axis=0)
    return W_star, bias
+
+def normal_GD_compare():
+    W_h = np.zeros((784,1))
+    b_h = 0
+    start_nor = time.time()
+    W_star_nor, bias_nor = W_star_calculator(trainData, trainTarget, 0)
+    end_nor = time.time()
+    print('computation time of normal equation: ')
+    print(end_nor - start_nor)
+    start_gd = time.time()
+    train_bias, train_W, loss_a1 = grad_descent(W_h, b_h, trainData, trainTarget, 0.005, 5000, 0, 1e-7)
+    end_gd = time.time()
+    print('computation time of batch GD: ')
+    print(end_gd - start_gd)
+
+    ###normal
+    print('final training loss of normal equation:')
+    print(MSE(W_star_nor, bias_nor, trainData, trainTarget, 0))
+
+    print('final accuracy of normal equation on training data:')
+    y_hat = np.dot(trainData, W_star_nor) + bias_nor
+    print(np.sum((y_hat >= 0.5) == trainTarget) / trainTarget.shape[0])
+    print('final accuracy of normal equation on validation data:')
+    y_hat = np.dot(validData, W_star_nor) + bias_nor
+    print(np.sum((y_hat >= 0.5) == validTarget) / validTarget.shape[0])
+    print('final accuracy of normal equation on test data:')
+    y_hat = np.dot(testData, W_star_nor) + bias_nor
+    print(np.sum((y_hat >= 0.5) == testTarget) / testTarget.shape[0])
+
+    ###GD
+    print('final training loss of gd:')
+    print(MSE(train_W[len(train_W)-1], train_bias[len(train_bias)-1], trainData, trainTarget, 0))
+
+    print('final accuracy of gd on training data:')
+    y_hat = np.dot(trainData, train_W[len(train_W)-1]) + train_bias[len(train_bias)-1]
+    print(np.sum((y_hat >= 0.5) == trainTarget) / trainTarget.shape[0])
+    print('final accuracy of gd on validation data:')
+    y_hat = np.dot(validData, train_W[len(train_W)-1]) + train_bias[len(train_bias)-1]
+    print(np.sum((y_hat >= 0.5) == validTarget) / validTarget.shape[0])
+    print('final accuracy of gd on test data:')
+    y_hat = np.dot(testData, train_W[len(train_W)-1]) + train_bias[len(train_bias)-1]
+    print(np.sum((y_hat >= 0.5) == testTarget) / testTarget.shape[0])
+
+    return
+
 
 def linear_reg():
     ###############################################
@@ -176,4 +222,5 @@ def linear_reg():
 
     plt.show()
 
-linear_reg()
+# linear_reg()
+normal_GD_compare()
