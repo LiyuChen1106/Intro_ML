@@ -109,13 +109,25 @@ def linear_reg():
     plt.suptitle('Training data')
     # alpha = 0.005
     alpha1 = 0.005
+    start_a1 = time.time()
     train_bias1, train_W1, loss_a1 = grad_descent(W, b, trainData, trainTarget, alpha1, epochs, reg, error_tol)
+    end_a1 = time.time()
     # alpha = 0.001
     alpha2 = 0.001
+    start_a2 = time.time()
     train_bias2, train_W2, loss_a2 = grad_descent(W, b, trainData, trainTarget, alpha2, epochs, reg, error_tol)
+    end_a2 = time.time()
     # alpha = 0.0001
     alpha3 = 0.0001
+    start_a3 = time.time()
     train_bias3, train_W3, loss_a3 = grad_descent(W, b, trainData, trainTarget, alpha3, epochs, reg, error_tol)
+    end_a3 = time.time()
+    print('computation time (alpha = 0.005): ')
+    print(start_a1-end_a1)
+    print('computation time (alpha = 0.001): ')
+    print(start_a2-end_a2)
+    print('computation time (alpha = 0.0001): ')
+    print(start_a3-end_a3)
     plt.plot(loss_a1, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha1, reg))
     plt.plot(loss_a2, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha2, reg))
     plt.plot(loss_a3, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha3, reg))
@@ -134,7 +146,6 @@ def linear_reg():
     # alpha = 0.0001
     print('final accuracy on training data (alpha = 0.0001):')
     print(accuracy_plot(train_W3, train_bias3, trainData, trainTarget, alpha3, reg))
-
 
     plt.figure(2)
     validate_test_all_alpha_plot(train_W1, train_bias1, train_W2, train_bias2, train_W3, train_bias3, validData, validTarget,
@@ -156,9 +167,21 @@ def linear_reg():
 
     plt.figure(4)
     plt.suptitle('Training data')
+    start_b1 = time.time()
     train_bias4, train_W4, loss_r1 = grad_descent(W, b, trainData, trainTarget, alpha, epochs, reg[0], error_tol)
+    end_b1 = time.time()
+    start_b2 = time.time()
     train_bias5, train_W5, loss_r2 = grad_descent(W, b, trainData, trainTarget, alpha, epochs, reg[1], error_tol)
+    end_b2 = time.time()
+    start_b3 = time.time()
     train_bias6, train_W6, loss_r3 = grad_descent(W, b, trainData, trainTarget, alpha, epochs, reg[2], error_tol)
+    end_b3 = time.time()
+    print('computation time (reg = {}):'.format(reg[0]))
+    print(start_b1-end_b1)
+    print('computation time (reg = {}):'.format(reg[1]))
+    print(start_b2-end_b2)
+    print('computation time (reg = {}):'.format(reg[2]))
+    print(start_b3-end_b3)
     plt.plot(loss_r1, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha, reg[0]))
     plt.plot(loss_r2, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha, reg[1]))
     plt.plot(loss_r3, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha, reg[2]))
@@ -222,5 +245,5 @@ def linear_reg():
 
     plt.show()
 
-# linear_reg()
-normal_GD_compare()
+linear_reg()
+# normal_GD_compare()

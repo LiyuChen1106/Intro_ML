@@ -15,86 +15,86 @@ def SGD():
     ###############################################
     ###               3.2                       ###
     ###############################################
-    # plt.figure(1)
-    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
-    # plt.savefig('SGD_MSE_500.png')
-    #
-    # ###############################################
-    # ###               3.3                       ###
-    # ###############################################
-    # plt.figure(2)
-    # minibatch(100, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
-    # plt.savefig('SGD_MSE_100.png')
-    # plt.figure(3)
-    # minibatch(700, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
-    # plt.savefig('SGD_MSE_700.png')
-    # plt.figure(4)
-    # minibatch(1750, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
-    # plt.savefig('SGD_MSE_1750.png')
-    #
-    # ###############################################
-    # ###               3.4                       ###
-    # ###############################################
-    # plt.figure(5, figsize=(16, 4))
-    # plt.subplot(121)
-    # minibatch(500, trainData, trainTarget, 0.95, beta2_d, epi_d, False, lossType="MSE")
-    # plt.title("\u03B2_1 = 0.95")
-    # plt.subplot(122)
-    # minibatch(500, trainData, trainTarget, 0.99, beta2_d, epi_d, False, lossType="MSE")
-    # plt.title("\u03B2_1 = 0.99")
-    # plt.savefig('SGD_MSE_BETA1.png')
-    #
-    # plt.figure(6, figsize=(16, 4))
-    # plt.subplot(121)
-    # minibatch(500, trainData, trainTarget, beta1_d, 0.99, epi_d, False, lossType="MSE")
-    # plt.title("\u03B2_2 = 0.99")
-    # plt.subplot(122)
-    # minibatch(500, trainData, trainTarget, beta1_d, 0.9999, epi_d, False, lossType="MSE")
-    # plt.title("\u03B2_2 = 0.9999")
-    # plt.savefig('SGD_MSE_BETA2.png')
-    #
-    # plt.figure(7, figsize=(16, 4))
-    # plt.subplot(121)
-    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-9, False, lossType="MSE")
-    # plt.title("\u03B5 = 1e-9")
-    # plt.subplot(122)
-    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-4, False, lossType="MSE")
-    # plt.title("\u03B5 = 1e-4")
-    # plt.savefig('SGD_MSE_EPI.png')
+    plt.figure(1)
+    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
+    plt.savefig('SGD_MSE_500.png')
+
+    ###############################################
+    ###               3.3                       ###
+    ###############################################
+    plt.figure(2)
+    minibatch(100, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
+    plt.savefig('SGD_MSE_100.png')
+    plt.figure(3)
+    minibatch(700, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
+    plt.savefig('SGD_MSE_700.png')
+    plt.figure(4)
+    minibatch(1750, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="MSE")
+    plt.savefig('SGD_MSE_1750.png')
+
+    ###############################################
+    ###               3.4                       ###
+    ###############################################
+    plt.figure(5, figsize=(16, 4))
+    plt.subplot(121)
+    minibatch(500, trainData, trainTarget, 0.95, beta2_d, epi_d, False, lossType="MSE")
+    plt.title("\u03B2_1 = 0.95")
+    plt.subplot(122)
+    minibatch(500, trainData, trainTarget, 0.99, beta2_d, epi_d, False, lossType="MSE")
+    plt.title("\u03B2_1 = 0.99")
+    plt.savefig('SGD_MSE_BETA1.png')
+
+    plt.figure(6, figsize=(16, 4))
+    plt.subplot(121)
+    minibatch(500, trainData, trainTarget, beta1_d, 0.99, epi_d, False, lossType="MSE")
+    plt.title("\u03B2_2 = 0.99")
+    plt.subplot(122)
+    minibatch(500, trainData, trainTarget, beta1_d, 0.9999, epi_d, False, lossType="MSE")
+    plt.title("\u03B2_2 = 0.9999")
+    plt.savefig('SGD_MSE_BETA2.png')
+
+    plt.figure(7, figsize=(16, 4))
+    plt.subplot(121)
+    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-9, False, lossType="MSE")
+    plt.title("\u03B5 = 1e-9")
+    plt.subplot(122)
+    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-4, False, lossType="MSE")
+    plt.title("\u03B5 = 1e-4")
+    plt.savefig('SGD_MSE_EPI.png')
 
     ###############################################
     ###               3.5                       ###
     ###############################################
-    plt.figure(8)
-    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="CE")
-    plt.savefig('SGD_CE_500.png')
-
-    plt.figure(9, figsize=(16, 4))
-    plt.subplot(121)
-    minibatch(500, trainData, trainTarget, 0.95, beta2_d, epi_d, False, lossType="CE")
-    plt.title("\u03B2_1 = 0.95")
-    plt.subplot(122)
-    minibatch(500, trainData, trainTarget, 0.99, beta2_d, epi_d, False, lossType="CE")
-    plt.title("\u03B2_1 = 0.99")
-    plt.savefig('SGD_CE_BETA1.png')
-
-    plt.figure(10, figsize=(16, 4))
-    plt.subplot(121)
-    minibatch(500, trainData, trainTarget, beta1_d, 0.99, epi_d, False, lossType="CE")
-    plt.title("\u03B2_2 = 0.99")
-    plt.subplot(122)
-    minibatch(500, trainData, trainTarget, beta1_d, 0.9999, epi_d, False, lossType="CE")
-    plt.title("\u03B2_2 = 0.9999")
-    plt.savefig('SGD_CE_BETA2.png')
-
-    plt.figure(11, figsize=(16, 4))
-    plt.subplot(121)
-    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-9, False, lossType="CE")
-    plt.title("\u03B5 = 1e-9")
-    plt.subplot(122)
-    minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-4, False, lossType="CE")
-    plt.title("\u03B5 = 1e-4")
-    plt.savefig('SGD_CE_EPI.png')
+    # plt.figure(8)
+    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, epi_d, True, lossType="CE")
+    # plt.savefig('SGD_CE_500.png')
+    #
+    # plt.figure(9, figsize=(16, 4))
+    # plt.subplot(121)
+    # minibatch(500, trainData, trainTarget, 0.95, beta2_d, epi_d, False, lossType="CE")
+    # plt.title("\u03B2_1 = 0.95")
+    # plt.subplot(122)
+    # minibatch(500, trainData, trainTarget, 0.99, beta2_d, epi_d, False, lossType="CE")
+    # plt.title("\u03B2_1 = 0.99")
+    # plt.savefig('SGD_CE_BETA1.png')
+    #
+    # plt.figure(10, figsize=(16, 4))
+    # plt.subplot(121)
+    # minibatch(500, trainData, trainTarget, beta1_d, 0.99, epi_d, False, lossType="CE")
+    # plt.title("\u03B2_2 = 0.99")
+    # plt.subplot(122)
+    # minibatch(500, trainData, trainTarget, beta1_d, 0.9999, epi_d, False, lossType="CE")
+    # plt.title("\u03B2_2 = 0.9999")
+    # plt.savefig('SGD_CE_BETA2.png')
+    #
+    # plt.figure(11, figsize=(16, 4))
+    # plt.subplot(121)
+    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-9, False, lossType="CE")
+    # plt.title("\u03B5 = 1e-9")
+    # plt.subplot(122)
+    # minibatch(500, trainData, trainTarget, beta1_d, beta2_d, 1e-4, False, lossType="CE")
+    # plt.title("\u03B5 = 1e-4")
+    # plt.savefig('SGD_CE_EPI.png')
 
     plt.show()
 
@@ -143,6 +143,20 @@ def minibatch(minibatch_size, trainingData, trainingTarget, beta1, beta2, epsilo
         acc_test[i] = np.sum((np.dot(testData, train_W) + train_b >= 0.5) == testTarget) / testTarget.shape[0]
         loss_test[i] = sess.run(loss_t, feed_dict={x: testData, y: testTarget, lambda_: 0})
 
+    print('Minibatch size {}'.format(minibatch_size))
+    print('{}: (beta1 = {}, beta2 = {}, epsilon = {}):'.format(lossType, beta1, beta2, epsilon))
+    print('{}: final accuracy on training data:'.format(lossType))
+    print(acc_train[len(acc_train) - 1])
+    print('{}: final accuracy on valid data:'.format(lossType))
+    print(acc_valid[len(acc_valid) - 1])
+    print('{}: final accuracy on test data :'.format(lossType))
+    print(acc_test[len(acc_test) - 1])
+    print('{}: final loss on training data:'.format(lossType))
+    print(loss_train[len(loss_train) - 1])
+    print('{}: final loss on valid data :'.format(lossType))
+    print(loss_valid[len(loss_valid) - 1])
+    print('{}: final loss on test data :'.format(lossType))
+    print(loss_test[len(loss_test) - 1])
 
     # Canvas making
     if(plot_loss):
@@ -163,7 +177,6 @@ def minibatch(minibatch_size, trainingData, trainingTarget, beta1, beta2, epsilo
         ax1.plot(acc_train, label='training data')
         ax1.plot(acc_valid, label='validation data')
         ax1.plot(acc_test, label='test data')
-
 
         ax0.grid()
         ax1.grid()
