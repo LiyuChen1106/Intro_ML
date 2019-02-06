@@ -73,6 +73,19 @@ final accuracy on test data (alpha = 0.001):
 final accuracy on test data (alpha = 0.0001):
 0.5448275862068965
 
+computation time (alpha = 0.005): 
+-20.033167123794556
+computation time (alpha = 0.001): 
+-20.33675503730774
+computation time (alpha = 0.0001): 
+-24.770046949386597
+computation time (reg = 0.001):
+-25.993096113204956
+computation time (reg = 0.1):
+-20.26568603515625
+computation time (reg = 0.5):
+-21.78715705871582
+
 
 ###############################################
 ###               1.4                       ###
