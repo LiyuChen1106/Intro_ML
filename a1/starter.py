@@ -132,7 +132,8 @@ def accuracy_plot(Wl, bl, x, y, alpha, reg):
     accuracy = []
 
     for i in range(len(Wl)):
-        acc = accuracy_calculator(Wl[i], bl[i], x, y)
+        y_hat = np.dot(x, Wl[i]) + bl[i]
+        acc = np.sum((y_hat >= 0.5) == y) / y.shape[0]
         accuracy.append(acc)
     plt.plot(accuracy, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
 
@@ -140,17 +141,9 @@ def accuracy_plot(Wl, bl, x, y, alpha, reg):
     return accuracy[len(accuracy)-1]
 
 
-def accuracy_calculator(W, b, x, y):
-    # print('in calculating accuracy')
-    y_hat = np.dot(x, W) + b
-    accuracy = np.sum((y_hat >= 0.5) == y) / y.shape[0]
-    # print('calculating accuracy finished')
-    return accuracy
-
-
 def buildGraph(loss="None"):
-    W = tf.Variable(tf.random.truncated_normal([784, 1], stddev=0.5, dtype=tf.float32))
-    b = tf.Variable(tf.random.truncated_normal([1, 1], stddev=0.5, dtype=tf.float32))
+    W = tf.Variable(tf.truncated_normal([784, 1], stddev=0.5, dtype=tf.float32))
+    b = tf.Variable(tf.zeros(1))
 
     x = tf.placeholder(tf.float32, [None, 784])
     y = tf.placeholder(tf.float32, [None, 1])

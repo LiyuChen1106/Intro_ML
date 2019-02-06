@@ -85,6 +85,7 @@ def linear_reg():
     validate_test_all_alpha_plot(train_W1, train_bias1, train_W2, train_bias2, train_W3, train_bias3, testData, testTarget,
                                  'Test data')
 
+    plt.grid()
     plt.show()
 
     ###############################################

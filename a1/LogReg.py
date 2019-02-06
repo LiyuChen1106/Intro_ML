@@ -32,6 +32,7 @@ def log_reg():
     print(accuracy_plot(train_W1, train_bias1, trainData, trainTarget, alpha1, reg))
     plt.xlabel('epochs')
     plt.ylabel('accuracy')
+    plt.grid()
 
     #######################Calculate loss on validation
     # validation losses with different alpha
@@ -49,6 +50,7 @@ def log_reg():
     print(accuracy_plot(train_W1, train_bias1, validData, validTarget, alpha1, reg))
     plt.xlabel('epochs')
     plt.ylabel('accuracy')
+    plt.grid()
 
     #######################Calculate loss on test
     # test losses with different alpha
@@ -66,6 +68,7 @@ def log_reg():
     print(accuracy_plot(train_W1, train_bias1, testData, testTarget, alpha1, reg))
     plt.xlabel('epochs')
     plt.ylabel('accuracy')
+    plt.grid()
     plt.show()
 
 
