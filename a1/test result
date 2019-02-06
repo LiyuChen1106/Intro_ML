@@ -114,3 +114,275 @@ final accuracy on validation data (alpha = 0.005, lambda = 0.1):
 0.98
 final accuracy on test data (alpha = 0.005, lambda = 0.1):
 0.9793103448275862
+
+
+
+###############################################
+###               3.3                       ###
+###############################################
+
+Minibatch size 500
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.8885714285714286
+MSE: final accuracy on valid data:
+0.888
+MSE: final accuracy on test data :
+0.8137931034482758
+MSE: final loss on training data:
+0.08088959753513336
+MSE: final loss on valid data :
+0.11426036804914474
+MSE: final loss on test data :
+0.1493220180273056
+Minibatch size 100
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.984
+MSE: final accuracy on valid data:
+0.94
+MSE: final accuracy on test data :
+0.9448275862068966
+MSE: final loss on training data:
+0.01748909242451191
+MSE: final loss on valid data :
+0.03802383318543434
+MSE: final loss on test data :
+0.032344263046979904
+Minibatch size 700
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.9017142857142857
+MSE: final accuracy on valid data:
+0.87
+MSE: final accuracy on test data :
+0.8827586206896552
+MSE: final loss on training data:
+0.06568878144025803
+MSE: final loss on valid data :
+0.10557141155004501
+MSE: final loss on test data :
+0.07787089794874191
+Minibatch size 1750
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.7451428571428571
+MSE: final accuracy on valid data:
+0.72
+MSE: final accuracy on test data :
+0.7172413793103448
+MSE: final loss on training data:
+0.3089791536331177
+MSE: final loss on valid data :
+0.3755949139595032
+MSE: final loss on test data :
+0.4137412905693054
+
+
+###############################################
+###               3.4                       ###
+###############################################
+###beta1
+\\
+MSE: (beta1 = 0.95, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.8711428571428571
+MSE: final accuracy on valid data:
+0.87
+MSE: final accuracy on test data :
+0.8344827586206897
+MSE: final loss on training data:
+0.09265352785587311
+MSE: final loss on valid data :
+0.15779760479927063
+MSE: final loss on test data :
+0.12186777591705322
+Minibatch size 500
+MSE: (beta1 = 0.99, beta2 = 0.999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.8251428571428572
+MSE: final accuracy on valid data:
+0.86
+MSE: final accuracy on test data :
+0.7931034482758621
+MSE: final loss on training data:
+0.15224379301071167
+MSE: final loss on valid data :
+0.13896232843399048
+MSE: final loss on test data :
+0.20851954817771912
+
+
+###beta2
+\\
+MSE: (beta1 = 0.9, beta2 = 0.99, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.9614285714285714
+MSE: final accuracy on valid data:
+0.88
+MSE: final accuracy on test data :
+0.903448275862069
+MSE: final loss on training data:
+0.02900340035557747
+MSE: final loss on valid data :
+0.06383030116558075
+MSE: final loss on test data :
+0.06380166113376617
+Minibatch size 500
+MSE: (beta1 = 0.9, beta2 = 0.9999, epsilon = 1e-08):
+MSE: final accuracy on training data:
+0.894
+MSE: final accuracy on valid data:
+0.86
+MSE: final accuracy on test data :
+0.8275862068965517
+MSE: final loss on training data:
+0.07011670619249344
+MSE: final loss on valid data :
+0.13506187498569489
+MSE: final loss on test data :
+0.1482516974210739
+
+
+###epilon
+\\
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-09):
+MSE: final accuracy on training data:
+0.8402857142857143
+MSE: final accuracy on valid data:
+0.82
+MSE: final accuracy on test data :
+0.7586206896551724
+MSE: final loss on training data:
+0.12515875697135925
+MSE: final loss on valid data :
+0.1741667240858078
+MSE: final loss on test data :
+0.16034895181655884
+Minibatch size 500
+MSE: (beta1 = 0.9, beta2 = 0.999, epsilon = 0.0001):
+MSE: final accuracy on training data:
+0.8802857142857143
+MSE: final accuracy on valid data:
+0.85
+MSE: final accuracy on test data :
+0.8068965517241379
+MSE: final loss on training data:
+0.0825994685292244
+MSE: final loss on valid data :
+0.10036882758140564
+MSE: final loss on test data :
+0.12463310360908508
+
+
+###############################################
+###               3.5                       ###
+###############################################
+CE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08):
+CE: final accuracy on training data:
+0.994
+CE: final accuracy on valid data:
+0.97
+CE: final accuracy on test data :
+0.9793103448275862
+CE: final loss on training data:
+0.01844937726855278
+CE: final loss on valid data :
+0.06865734606981277
+CE: final loss on test data :
+0.1340368539094925
+
+###beta1
+\\
+CE: (beta1 = 0.95, beta2 = 0.999, epsilon = 1e-08):
+CE: final accuracy on training data:
+0.992
+CE: final accuracy on valid data:
+0.98
+CE: final accuracy on test data :
+0.9862068965517241
+CE: final loss on training data:
+0.019885044544935226
+CE: final loss on valid data :
+0.08344265818595886
+CE: final loss on test data :
+0.1441860795021057
+Minibatch size 500
+CE: (beta1 = 0.99, beta2 = 0.999, epsilon = 1e-08):
+CE: final accuracy on training data:
+0.9937142857142857
+CE: final accuracy on valid data:
+0.97
+CE: final accuracy on test data :
+0.9655172413793104
+CE: final loss on training data:
+0.015437943860888481
+CE: final loss on valid data :
+0.06872406601905823
+CE: final loss on test data :
+0.17171715199947357
+
+
+###beta2
+\\
+CE: (beta1 = 0.9, beta2 = 0.99, epsilon = 1e-08):
+CE: final accuracy on training data:
+0.9977142857142857
+CE: final accuracy on valid data:
+0.97
+CE: final accuracy on test data :
+0.9793103448275862
+CE: final loss on training data:
+0.01021038182079792
+CE: final loss on valid data :
+0.0618315227329731
+CE: final loss on test data :
+0.15687519311904907
+Minibatch size 500
+CE: (beta1 = 0.9, beta2 = 0.9999, epsilon = 1e-08):
+CE: final accuracy on training data:
+0.9897142857142858
+CE: final accuracy on valid data:
+0.98
+CE: final accuracy on test data :
+0.9793103448275862
+CE: final loss on training data:
+0.023358546197414398
+CE: final loss on valid data :
+0.04209249094128609
+CE: final loss on test data :
+0.11094775795936584
+
+###epilon
+\\
+
+CE: (beta1 = 0.9, beta2 = 0.999, epsilon = 1e-09):
+CE: final accuracy on training data:
+0.9931428571428571
+CE: final accuracy on valid data:
+0.97
+CE: final accuracy on test data :
+0.9724137931034482
+CE: final loss on training data:
+0.022423341870307922
+CE: final loss on valid data :
+0.08214949816465378
+CE: final loss on test data :
+0.13450460135936737
+Minibatch size 500
+CE: (beta1 = 0.9, beta2 = 0.999, epsilon = 0.0001):
+CE: final accuracy on training data:
+0.99
+CE: final accuracy on valid data:
+0.97
+CE: final accuracy on test data :
+0.9724137931034482
+CE: final loss on training data:
+0.025142846629023552
+CE: final loss on valid data :
+0.04366186633706093
+CE: final loss on test data :
+0.16432061791419983
+
+
+
