@@ -78,12 +78,12 @@ def grad_descent(W, b, trainingData, trainingLabels, alpha, epochs, reg, EPS, lo
             W_comb.append(train_W)
             b_comb.append(train_bias)
             losses.append(mse)
-        plt.plot(losses, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
+        # plt.plot(losses, label='MSE: \u03B1 = {}, \u03BB = {}'.format(alpha, reg))
         print('GD with \u03B1 = {}, \u03BB = {} finished'.format(alpha, reg))
     else:
-        b_comb, W_comb = grad_descent_CE(W, b, trainingData, trainingLabels, alpha, epochs, reg, EPS)
+        b_comb, W_comb, losses = grad_descent_CE(W, b, trainingData, trainingLabels, alpha, epochs, reg, EPS)
 
-    return b_comb, W_comb
+    return b_comb, W_comb, losses
 
 
 def grad_descent_CE(W, b, train_dt_reshape, trainingLabels, alpha, epochs, reg, EPS):
@@ -105,13 +105,13 @@ def grad_descent_CE(W, b, train_dt_reshape, trainingLabels, alpha, epochs, reg, 
         W_comb.append(train_W)
         b_comb.append(train_bias)
         losses.append(ce)
-    plt.plot(losses, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
+    # plt.plot(losses, label='CE: \u03B1 = {}, \u03BB = {}'.format(alpha, reg))
     print('GDCE with \u03B1 = {}, \u03BB = {} finished'.format(alpha, reg))
-    return b_comb, W_comb
+    return b_comb, W_comb, losses
 
 
 def valid_or_test_loss(Wl, bl, x, y, reg, alpha, lossType="None"):
-    print('in calculating validation/test loss with \u03B1 = {}, \u03BB = {}'.format(alpha, reg))
+    # print('in calculating validation/test loss with \u03B1 = {}, \u03BB = {}'.format(alpha, reg))
     losses = []
 
     for i in range(len(Wl)):
@@ -122,26 +122,30 @@ def valid_or_test_loss(Wl, bl, x, y, reg, alpha, lossType="None"):
             ce = crossEntropyLoss(Wl[i], bl[i], x, y, reg)
             losses.append(ce)
 
-    plt.plot(losses, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
-    print('validation/test loss with \u03B1 = {}, \u03BB = {} finished'.format(alpha, reg))
-    return
+    # plt.plot(losses, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
+    # print('validation/test loss with \u03B1 = {}, \u03BB = {} finished'.format(alpha, reg))
+    return losses
 
 
 def accuracy_plot(Wl, bl, x, y, alpha, reg):
     # print('in plotting accuracy')
+    accuracy = accuracy_calc(Wl, bl, x, y, alpha, reg)
+    # plt.plot(accuracy, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
+
+    # print('plotting accuracy finished')
+    return accuracy[len(accuracy)-1]
+
+def accuracy_calc(Wl, bl, x, y, alpha, reg):
     accuracy = []
 
     for i in range(len(Wl)):
         y_hat = np.dot(x, Wl[i]) + bl[i]
         acc = np.sum((y_hat >= 0.5) == y) / y.shape[0]
         accuracy.append(acc)
-    plt.plot(accuracy, label='\u03B1 = {}, \u03BB = {}'.format(alpha, reg))
 
-    # print('plotting accuracy finished')
-    return accuracy[len(accuracy)-1]
+    return accuracy
 
-
-def buildGraph(loss="None"):
+def buildGraph(beta1, beta2, epsilon, loss="None"):
     W = tf.Variable(tf.truncated_normal([784, 1], stddev=0.5, dtype=tf.float32))
     b = tf.Variable(tf.zeros(1))
 
@@ -157,5 +161,5 @@ def buildGraph(loss="None"):
         logits = (tf.matmul(x, W) + b)
         loss_t = tf.nn.sigmoid_cross_entropy_with_logits(labels=y, logits=logits) + lambda_ * tf.nn.l2_loss(W)
 
-    adam_op = tf.train.AdamOptimizer(learning_rate=0.001).minimize(loss_t)
+    adam_op = tf.train.AdamOptimizer(learning_rate=0.001, beta1=beta1, beta2=beta2, epsilon=epsilon).minimize(loss_t)
     return x, y, W, b, lambda_, loss_t, adam_op
