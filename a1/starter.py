@@ -159,7 +159,7 @@ def buildGraph(beta1, beta2, epsilon, loss="None"):
         loss_t = 0.5 * tf.reduce_mean(tf.square(y - y_hat)) + lambda_ * tf.nn.l2_loss(W)
     elif loss == "CE":
         logits = (tf.matmul(x, W) + b)
-        loss_t = tf.nn.sigmoid_cross_entropy_with_logits(labels=y, logits=logits) + lambda_ * tf.nn.l2_loss(W)
+        loss_t = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=y, logits=logits)) + lambda_ * tf.nn.l2_loss(W)
 
     adam_op = tf.train.AdamOptimizer(learning_rate=0.001, beta1=beta1, beta2=beta2, epsilon=epsilon).minimize(loss_t)
     return x, y, W, b, lambda_, loss_t, adam_op

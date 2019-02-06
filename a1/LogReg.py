@@ -19,7 +19,6 @@ def log_reg():
     #######################Train
     # traing losses with different alpha
     plt.figure(1, figsize=(16, 4))
-    plt.suptitle('Training data')
     plt.subplot(121)
     # alpha = 0.005
     alpha1 = 0.005
