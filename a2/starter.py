@@ -48,15 +48,15 @@ def relu(x):
     return np.maximum(x, 0)
 
 def softmax(x):
-    return np.exp(x) / np.sum(np.exp(x), axis=1)
+    return np.exp(x) / np.sum(np.exp(x), axis=1, keepdims=True)
 
 
 def computeLayer(X, W, b):
-    return np.dot(X, W) + b
+    return np.matmul(X, W) + b
 
 def CE(target, prediction):
     N = target.shape[0]
-    return -np.sum(target * np.log(softmax(prediction))) / N
+    return -np.sum(target * np.log(prediction)) / N
 
 def gradCE(target, prediction):
     return prediction - target
