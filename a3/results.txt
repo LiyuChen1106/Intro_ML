@@ -1,0 +1,216 @@
+Enter K = 1 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[1.]
+[[ 0.10431173 -1.5054241 ]]
+final loss on train data :
+38453.51
+Enter K = 2 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.5047 0.4953]
+[[-0.83888066 -2.9139366 ]
+ [ 1.0622771  -0.06976613]]
+final loss on train data :
+9203.355
+Enter K = 3 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.3778 0.3895 0.2327]
+[[ 1.2504281   0.25643194]
+ [-1.0601004  -3.0698736 ]
+ [ 0.1937705  -1.5026251 ]]
+final loss on train data :
+5207.95
+Enter K = 4 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.1349 0.1209 0.3713 0.3729]
+[[ 0.81573343 -1.9506763 ]
+ [-0.6712018  -1.0604326 ]
+ [-1.0642146  -3.2638319 ]
+ [ 1.2578381   0.2621861 ]]
+final loss on train data :
+3374.0361
+Enter K = 5 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.3704 0.0738 0.1168 0.37   0.069 ]
+[[-1.0677346  -3.2649498 ]
+ [-0.9551555  -0.8133512 ]
+ [ 0.12436564 -1.582449  ]
+ [ 1.2607397   0.26826003]
+ [ 1.2725672  -2.1583285 ]]
+final loss on train data :
+2881.209
+
+
+
+
+
++++++validation
+Enter K = 1 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[1.]
+[[ 0.11896902 -1.4845622 ]]
+final loss on train data :
+25589.084
+final loss on valid data :
+12871.315
+Enter K = 2 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.499925 0.500075]
+[[ 1.0694368  -0.0739729 ]
+ [-0.83085597 -2.8768845 ]]
+final loss on train data :
+6246.0757
+final loss on valid data :
+2963.1616
+Enter K = 3 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.37573121 0.24028799 0.3839808 ]
+[[-1.0679563  -3.224534  ]
+ [ 0.19055425 -1.5485237 ]
+ [ 1.2356919   0.25481465]]
+final loss on train data :
+3489.2583
+final loss on valid data :
+1629.0146
+Enter K = 4 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.36343183 0.13724314 0.12314384 0.37618119]
+[[-1.0629885  -3.2664745 ]
+ [ 0.83832896 -1.94775   ]
+ [-0.6605305  -1.0757842 ]
+ [ 1.2536216   0.26263732]]
+final loss on train data :
+2320.1587
+final loss on valid data :
+1054.49
+Enter K = 5 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.34978251 0.08834558 0.36673166 0.09359532 0.10154492]
+[[-1.1072952  -3.273038  ]
+ [ 1.2081908  -1.6486363 ]
+ [ 1.2605988   0.2837736 ]
+ [ 0.05188032 -2.2879252 ]
+ [-0.66387606 -0.8481351 ]]
+final loss on train data :
+1960.4868
+final loss on valid data :
+894.53107
+
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+Enter K = 1 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[1.]
+[[ 0.10280085 -1.5054237 ]]
+final loss on train data :
+34915.945
+Enter K = 2 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.3434 0.6566]
+[[ 1.2956538   0.30521986]
+ [-0.5161572  -2.4452703 ]]
+final loss on train data :
+24139.055
+Enter K = 3 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.339  0.3226 0.3384]
+[[ 1.2961094   0.3123494 ]
+ [ 0.10370627 -1.5264859 ]
+ [-1.1029816  -3.3060937 ]]
+final loss on train data :
+17133.035
+Enter K = 4 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.1576 0.3382 0.1654 0.3388]
+[[ 0.00995504 -1.4557538 ]
+ [-1.1055923  -3.3060725 ]
+ [ 0.21655919 -1.6095289 ]
+ [ 1.2962532   0.3100483 ]]
+final loss on train data :
+17133.068
+Enter K = 5 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.1184 0.3365 0.3358 0.0909 0.1184]
+[[ 0.58635867 -1.6132915 ]
+ [ 1.2984658   0.30724567]
+ [-1.101327   -3.3088865 ]
+ [-0.06238394 -0.55265987]
+ [-0.21177049 -1.7068554 ]]
+final loss on train data :
+17130.455
+
+
+
++++++validation
+Enter K = 1 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[1.]
+[[ 0.11896902 -1.4881033 ]]
+final loss on train data :
+23265.98
+final loss on valid data :
+11651.443
+Enter K = 2 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.66326684 0.33673316]
+[[ 0.7314483  -0.57662094]
+ [-1.0973481  -3.3031337 ]]
+final loss on train data :
+16259.571
+final loss on valid data :
+8013.963
+Enter K = 3 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.32833358 0.34018299 0.33148343]
+[[ 0.12777382 -1.519207  ]
+ [ 1.3003197   0.31095976]
+ [-1.0956597  -3.3080616 ]]
+final loss on train data :
+11507.919
+final loss on valid data :
+5632.0293
+Enter K = 4 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.15629219 0.33163342 0.34018299 0.17189141]
+[[ 0.43806303 -1.7643418 ]
+ [-1.1005579  -3.308613  ]
+ [ 1.2944419   0.31018364]
+ [ 0.05279724 -1.4592968 ]]
+final loss on train data :
+11506.266
+final loss on valid data :
+5630.1064
+Enter K = 5 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+[0.06539673 0.11909405 0.15119244 0.33448328 0.32983351]
+[[ 0.16374803  0.02392167]
+ [-0.30884004 -1.5242585 ]
+ [ 0.3825018  -1.6233809 ]
+ [ 1.297231    0.31244695]
+ [-1.1063976  -3.3080657 ]]
+final loss on train data :
+11502.884
+final loss on valid data :
+5629.9067
