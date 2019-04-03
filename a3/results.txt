@@ -45,9 +45,6 @@ final loss on train data :
 2881.209
 
 
-
-
-
 +++++validation
 Enter K = 1 -----------------------------------------
 /usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
@@ -105,6 +102,9 @@ final loss on train data :
 final loss on valid data :
 894.53107
 
+
+
+
 #######################################################################################################
 #######################################################################################################
 #######################################################################################################
@@ -155,7 +155,6 @@ Enter K = 5 -----------------------------------------
  [-0.21177049 -1.7068554 ]]
 final loss on train data :
 17130.455
-
 
 
 +++++validation
@@ -214,3 +213,91 @@ final loss on train data :
 11502.884
 final loss on valid data :
 5629.9067
+
+
+
+
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+Kmeans
+Enter K = 4 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+final loss on train data :
+236024.11
+final loss on valid data :
+116870.8
+Enter K = 5 -----------------------------------------
+final loss on train data :
+143514.06
+final loss on valid data :
+71797.4
+Enter K = 6 -----------------------------------------
+final loss on train data :
+142272.14
+final loss on valid data :
+71172.15
+Enter K = 10 -----------------------------------------
+final loss on train data :
+140115.2
+final loss on valid data :
+70458.46
+Enter K = 15 -----------------------------------------
+final loss on train data :
+138099.56
+final loss on valid data :
+69501.734
+Enter K = 20 -----------------------------------------
+final loss on train data :
+137738.03
+final loss on valid data :
+69425.89
+Enter K = 30 -----------------------------------------
+final loss on train data :
+137858.44
+final loss on valid data :
+69521.17
+
+
+++++++++++++
+GMM
+Enter K = 5 -----------------------------------------
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py:1702: UserWarning: An interactive session is already active. This can cause out-of-memory errors in some cases. You must explicitly call `InteractiveSession.close()` to release resources held by the other session(s).
+  warnings.warn('An interactive session is already active. This can '
+final loss on train data :
+780309.6
+final loss on valid data :
+393410.7
+Enter K = 9 -----------------------------------------
+final loss on train data :
+728708.94
+final loss on valid data :
+361276.47
+Enter K = 10 -----------------------------------------
+final loss on train data :
+321148.9
+final loss on valid data :
+162182.86
+Enter K = 11 -----------------------------------------
+final loss on train data :
+323419.84
+final loss on valid data :
+163247.97
+Enter K = 15 -----------------------------------------
+final loss on train data :
+321632.0
+final loss on valid data :
+162631.3
+Enter K = 20 -----------------------------------------
+final loss on train data :
+321521.1
+final loss on valid data :
+162524.38
+Enter K = 30 -----------------------------------------
+final loss on train data :
+320521.75
+final loss on valid data :
+161948.95
