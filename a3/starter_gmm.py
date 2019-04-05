@@ -5,8 +5,8 @@ import helper as hlp
 import math
 
 # Loading data
-#data = np.load('data100D.npy')
-data = np.load('data2D.npy')
+data = np.load('data100D.npy')
+# data = np.load('data2D.npy')
 [num_pts, dim] = np.shape(data)
 
 
